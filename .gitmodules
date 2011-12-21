@@ -4,3 +4,6 @@
 [submodule "bundle/hatena-vim"]
 	path = bundle/hatena-vim
 	url = git://github.com/motemen/hatena-vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
