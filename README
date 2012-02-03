@@ -3,8 +3,4 @@
 git cloneしたら以下をしてください
 $ git submodule init
 $ git submodule update
-
-.vimrcに以下の2行を追加してください
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
+$ cp .vimrc ~/.vimrc
