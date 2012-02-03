@@ -4,9 +4,9 @@
 [submodule "bundle/hatena-vim"]
 	path = bundle/hatena-vim
 	url = git://github.com/motemen/hatena-vim.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/localvimrc"]
 	path = bundle/localvimrc
 	url = https://github.com/vim-scripts/localvimrc.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
