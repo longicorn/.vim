@@ -12,10 +12,6 @@ set nonumber
 set hidden
 set ruler
 set list
-
-"for programing
-"set tabstop=2
-"set shiftwidth=2
 set hlsearch
 
 "Escを2回連打すると検索結果が消える
@@ -129,11 +125,6 @@ colorscheme hhspring
 " block comments command: ,b
 "for C C++ /*    */
 
-"miniBufExpl
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBuffs = 1
-
 "map <C-n> :cn<CR>
 "map <C-p> :cp<CR>
 "map ^? :GtagsCursor<CR> "(^?はC-v + C-8)
@@ -188,15 +179,20 @@ let g:neocomplcache_enable_at_startup = 1
 let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
 
+"miniBufExpl
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBuffs = 1
+
+"autocomplpop
 inoremap ,s <ESC>:AutoComplPopDisable<CR>a
 inoremap ,q <ESC>:AutoComplPopEnable<CR>a
 nnoremap ,s :AutoComplPopDisable<CR>
 nnoremap ,q :AutoComplPopEnable<CR>
+"let g:AutoComplPop_NotEnableAtStartup=1
 
 "inoremap \sc ShowScratchBuffer
 "inoremap \sc InsShowScratchBuffer
-
-"let g:AutoComplPop_NotEnableAtStartup=1
 
 ""自動補完候補表示
 "" Thanks ns9tks
