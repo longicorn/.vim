@@ -134,10 +134,6 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBuffs = 1
 
-"ChangeLog
-let g:changelog_timeformat = "%Y-%m-%d"
-let g:changelog_username = "yasusi "
-
 "map <C-n> :cn<CR>
 "map <C-p> :cp<CR>
 "map ^? :GtagsCursor<CR> "(^?はC-v + C-8)
@@ -191,11 +187,6 @@ let g:neocomplcache_enable_at_startup = 1
 "let g:local_vimrc = 1
 let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
-
-"hatena
-"set runtimepath+=$VIM/hatena
-set runtimepath+=~/.vim/hatena
-let g:hatena_user='longicorn'
 
 inoremap ,s <ESC>:AutoComplPopDisable<CR>a
 inoremap ,q <ESC>:AutoComplPopEnable<CR>a
