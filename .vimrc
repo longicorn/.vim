@@ -164,7 +164,9 @@ augroup END
 nnoremap [unite] <Nop>
 nmap <Space>f [unite]
 "ファイル一覧
-nnoremap <silent> [unite]f :UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]f :Unite file<CR>
+"現在のファイルと同じディレクトリのファイル一覧
+nnoremap <silent> [unite]g :UniteWithBufferDir -buffer-name=files file<CR>
 "最近使ったファイルの一覧
 noremap [unite]l :Unite file_mru<CR>
 "ブックマーク一覧
