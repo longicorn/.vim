@@ -39,6 +39,17 @@ au FileType ruby call Ruby_Setting()
 
 function! Python_Setting()
 	set ts=4 sw=4 expandtab foldmethod=indent
+
+	"for ropevim
+	LoadRope
+	nnoremap [rope] <Nop>
+	vnoremap [vrope] <Nop>
+	nmap <Space>r [rope]
+	vmap <Space>r [vrope]
+	nnoremap <silent> [rope]r :RopeRename<CR>
+	nnoremap <silent> [rope]u :RopeUndo<CR>
+	"メソッド切り出し
+	vnoremap <silent> [vrope]f :RopeExtractMethod<CR>
 endfunction
 "for virtualenv
 "Python_Setting()でletしても意味なし
@@ -169,6 +180,11 @@ augroup Binary
   au BufWritePost *.bin set nomod | endif
 augroup END
 
+"ChangeLog
+let g:changelog_timeformat = "%Y-%m-%d"
+let g:changelog_username = "yasusi "
+
+
 " under plugin setting
 " --------------------
 
@@ -229,14 +245,6 @@ function! Neocomplcache_Setting()
 	let g:localvimrc_sandbox = 0
 endfunction
 call Neocomplcache_Setting()
-
-" hatena
-function! Hatena_Setting()
-	"set runtimepath+=$VIM/hatena
-	set runtimepath+=~/.vim/hatena
-	let g:hatena_user='longicorn'
-endfunction
-call Hatena_Setting()
 
 " Auto Complete PopUp
 function! AutoComplPop_Setting()
