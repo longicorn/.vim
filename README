@@ -1,6 +1,29 @@
 個人用の~/.vimです。
 
+=初期設定
 git cloneしたら以下をしてください
 $ git submodule init
 $ git submodule update
+$ cd bundle/pyflakes-vim
+$ git submodule init
+$ git submodule update
 $ cp .vimrc ~/.vimrc
+
+=rope用設定
+==ropeのインストール
+easy_installかpipでインストール
+$ easy_install rope ropemode ropevim
+$ pip rope ropemode ropevim
+
+==プラグインの読み込み順番
+vim-virtualenvをrope-vimよりも先に読み込ませたいが、pathogen.vimはbundleのディレクトリをアルファベット順に読み込むので、シンボリックリンクを適当な名前で貼ってください。
+例えば、このように
+$ ln -s bundle/vim-virtualenv bundle/birtualenv
+
+=virtualenv設定
+vim-virtualenvがPython以外のファイルを開くとエラーメッセージを毎回出すのでうざい。
+これをやめるには、
+bundle/vim-virtualenv/plugin/virtualenv.vimのこの行をコメントアウトすれば良い
+-----
+call s:Error("No VirtualEnv name given")
+-----

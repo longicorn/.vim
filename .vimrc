@@ -41,15 +41,16 @@ function! Python_Setting()
 	set ts=4 sw=4 expandtab foldmethod=indent
 
 	"for ropevim
-	LoadRope
-	nnoremap [rope] <Nop>
-	vnoremap [vrope] <Nop>
-	nmap <Space>r [rope]
-	vmap <Space>r [vrope]
-	nnoremap <silent> [rope]r :RopeRename<CR>
-	nnoremap <silent> [rope]u :RopeUndo<CR>
-	"メソッド切り出し
-	vnoremap <silent> [vrope]f :RopeExtractMethod<CR>
+	if exists("g:loaded_rope")
+		nnoremap [rope] <Nop>
+		vnoremap [vrope] <Nop>
+		nmap <Space>r [rope]
+		vmap <Space>r [vrope]
+		nnoremap <silent> [rope]r :RopeRename<CR>
+		nnoremap <silent> [rope]u :RopeUndo<CR>
+		"メソッド切り出し
+		vnoremap <silent> [vrope]f :RopeExtractMethod<CR>
+	endif
 endfunction
 "for virtualenv
 "Python_Setting()でletしても意味なし
