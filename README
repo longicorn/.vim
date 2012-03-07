@@ -16,7 +16,7 @@ $ easy_install rope ropemode ropevim
 $ pip install rope ropemode ropevim
 
 ==プラグインの読み込み順番
-vim-virtualenvをrope-vimよりも先に読み込ませたいが、pathogen.vimはbundleのディレクトリをアルファベット順に読み込むので、シンボリックリンクを適当な名前で貼ってください。
+vim-virtualenvをrope-vimよりも先に読み込ませたいが、pathogen.vimはbundleのディレクトリをアルファベット順に読み込むので、シンボリックリンクを適当な名前で貼ってください。(Macだけ? Linuxでは必要ない)
 例えば、このように
 $ ln -s bundle/vim-virtualenv bundle/birtualenv
 
