@@ -27,3 +27,15 @@ bundle/vim-virtualenv/plugin/virtualenv.vimのこの行をコメントアウト�
 -----
 call s:Error("No VirtualEnv name given")
 -----
+
+==syntax/django.vim
+Djangoが使うテンプレート用。*.htmlはDjango以外もあり得るのでひとまず以下のようにしておく。
+
+-----
+".lvimrc
+if exists("g:virtualenv_loaded")
+        if expand('%:e') == 'html'
+                set filetype=htmldjango
+        endif
+endif
+-----
