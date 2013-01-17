@@ -257,6 +257,13 @@ function! AutoComplPop_Setting()
 endfunction
 call AutoComplPop_Setting()
 
+" Scratch Buffer
+function! Scratch_Setting()
+	nmap <unique> <silent> <Space>sc <Plug>ShowScratchBuffer
+	imap <unique> <silent> <Space>sc <Plug>InsShowScratchBuffer
+endfunction
+call Scratch_Setting()
+
 "inoremap \sc ShowScratchBuffer
 "inoremap \sc InsShowScratchBuffer
 
