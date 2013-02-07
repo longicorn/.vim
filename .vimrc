@@ -91,16 +91,12 @@ function! Colorschem_Setting()
 	"colorscheme jhlight
 
 	"colorscheme bw
+
+	" 補完候補の色づけ for vim7
+	hi Pmenu ctermbg=white ctermfg=black
+	hi PmenuSel ctermbg=blue ctermfg=black
 endfunction
 call Colorschem_Setting()
-
-" 補完候補の色づけ for vim7
-"hi Pmenu ctermbg=7
-"hi PmenuSel ctermbg=12
-"hi PmenuSbar ctermbg=15
-"hi Pmenu ctermbg=Gray
-"hi PmenuSel ctermbg=Red
-"hi PmenuSbar ctermbg=White
 
 
 " under etc setting
