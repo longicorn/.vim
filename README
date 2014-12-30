@@ -1,5 +1,6 @@
 個人用の~/.vimです。
 
+=初期設定
 git cloneしたら以下をしてください
 $ git submodule init
 $ git submodule update
