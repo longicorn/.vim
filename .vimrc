@@ -18,6 +18,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-scripts/L9'
 "NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'motemen/hatena-vim'
 
 filetype on
 
