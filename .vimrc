@@ -19,6 +19,7 @@ NeoBundle 'vim-scripts/L9'
 "NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'motemen/hatena-vim'
+NeoBundle 'jamessan/vim-gnupg'
 
 filetype on
 
@@ -222,9 +223,12 @@ let g:changelog_username = "yasusi "
 
 "miniBufExpl
 "function! MiniBufExpl_Setting()
-"	let g:miniBufExplMapWindowNavVim = 1
-"	let g:miniBufExplMapWindowNavArrows = 1
-"	let g:miniBufExplMapCTabSwitchBuffs = 1
+"	"nmap <Tab> l
+"	nmap <Tab> :MBEbn<CR>
+"	"let g:miniBufExplMapWindowNavVim = 1
+"	"let g:miniBufExplMapWindowNavArrows = 1
+"	"let g:miniBufExplMapCTabSwitchBufs = 1
+"	"let g:miniBufExplMapCTabSwitchWindows = 1
 "endfunction
 "call MiniBufExpl_Setting()
 
