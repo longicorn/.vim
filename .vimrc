@@ -10,6 +10,7 @@ call neobundle#end()
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-scripts/DrawIt'
@@ -19,7 +20,7 @@ NeoBundle 'vim-scripts/L9'
 "NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'motemen/hatena-vim'
-NeoBundle 'jamessan/vim-gnupg'
+call neobundle#end()
 
 filetype on
 
@@ -223,12 +224,9 @@ let g:changelog_username = "yasusi "
 
 "miniBufExpl
 "function! MiniBufExpl_Setting()
-"	"nmap <Tab> l
-"	nmap <Tab> :MBEbn<CR>
-"	"let g:miniBufExplMapWindowNavVim = 1
-"	"let g:miniBufExplMapWindowNavArrows = 1
-"	"let g:miniBufExplMapCTabSwitchBufs = 1
-"	"let g:miniBufExplMapCTabSwitchWindows = 1
+"	let g:miniBufExplMapWindowNavVim = 1
+"	let g:miniBufExplMapWindowNavArrows = 1
+"	let g:miniBufExplMapCTabSwitchBuffs = 1
 "endfunction
 "call MiniBufExpl_Setting()
 

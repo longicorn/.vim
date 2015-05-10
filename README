@@ -2,8 +2,7 @@
 
 =初期設定
 git cloneしたら以下をしてください
-$ git submodule init
-$ git submodule update
+$ git clone git@github.com:Shougo/neobundle.vim.git buldle/neobundle.vim
 $ cp .vimrc ~/.vimrc
 
 =NeoBundle
