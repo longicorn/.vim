@@ -20,6 +20,7 @@ NeoBundle 'vim-scripts/L9'
 "NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'motemen/hatena-vim'
+NeoBundle 'jamessan/vim-gnupg'
 call neobundle#end()
 
 filetype on
