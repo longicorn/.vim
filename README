@@ -2,7 +2,7 @@
 
 =初期設定
 git cloneしたら以下をしてください
-$ git clone git@github.com:Shougo/neobundle.vim.git buldle/neobundle.vim
+$ git clone git@github.com:Shougo/neobundle.vim.git bundle/neobundle.vim
 $ cp .vimrc ~/.vimrc
 
 =NeoBundle
