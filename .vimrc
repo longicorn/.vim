@@ -10,7 +10,6 @@ call neobundle#end()
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
-call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-scripts/DrawIt'
@@ -20,8 +19,10 @@ NeoBundle 'vim-scripts/L9'
 "NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'motemen/hatena-vim'
-NeoBundle 'jamessan/vim-gnupg'
-call neobundle#end()
+NeoBundle 'jamessan/vim-gnupg.git'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'yuratomo/w3m.vim'
 
 filetype on
 
@@ -42,6 +43,9 @@ set noundofile
 "nmap <Esc> <S-Space><Esc>
 "Escを2回連打すると検索結果が消える
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+"spacex2で行選択
+nmap <Space><Space> V
 
 "全角スペースのハイライト
 augroup highlightDoubleByteSpace
@@ -132,11 +136,12 @@ function! Colorschem_Setting()
 	"colorscheme torte
 	"colorscheme blue
 
-	colorscheme hhspring
 	"colorscheme earth
 	"colorscheme jhlight
 
 	"colorscheme bw
+
+	colorscheme hhspring
 
 	" 補完候補の色づけ for vim7
 	hi Pmenu ctermbg=white ctermfg=black
@@ -230,6 +235,7 @@ let g:changelog_username = "yasusi "
 "	let g:miniBufExplMapCTabSwitchBuffs = 1
 "endfunction
 "call MiniBufExpl_Setting()
+"let loaded_minibufexplorer=1 "無効
 
 " unite
 function! Unite_Setting()
@@ -258,4 +264,29 @@ function! Neocomplcache_Setting()
 	    \ 'default' : ''
 	    \ }
 endfunction
-call Neocomplcache_Setting()
+"call Neocomplcache_Setting()
+
+" alcで単語翻訳
+" need w3m.vim
+" close :bd
+function! Alc_Setting()
+	function! Alc(word)
+	  let reg = @"
+	  let @" = ':W3m ' . 'http://eow.alc.co.jp/search?q=' .  a:word
+	  :execute @"
+	  let @" = reg
+	endfunction
+	
+	function! WAlc()
+	  let word = expand("<cword>")
+	  call Alc(word)
+	endfunction
+	
+	function! VAlc()
+	  let word = @"
+	  call Alc(word)
+	endfunction
+	nmap <Space>alc :call WAlc()<CR>
+	vmap <Space>alc y :call VAlc()<CR>
+endfunction
+call Alc_Setting()
