@@ -1,9 +1,12 @@
 個人用の~/.vimです。
 
 =初期設定
-git cloneしたら以下をしてください
-$ git clone git@github.com:Shougo/neobundle.vim.git bundle/neobundle.vim
-$ cp .vimrc ~/.vimrc
+```
+$ git clone https://github.com/longicorn/.vim.git ~/.vim
+$ cp ~/.vim/.vimrc ~/
+```
 
-=NeoBundle
-:NeoBundleInstall
+vimを起動してインストール
+```
+:call dein#install()
+```
