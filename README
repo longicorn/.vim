@@ -6,7 +6,9 @@ $ git clone https://github.com/longicorn/.vim.git ~/.vim
 $ cp ~/.vim/.vimrc ~/
 ```
 
-vimを起動してインストール
+https://github.com/Shougo/dein.vim をインストール
+
+vimを起動してpluginをインストール
 ```
 :call dein#install()
 ```
