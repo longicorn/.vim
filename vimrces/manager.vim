@@ -15,6 +15,7 @@ call dein#add('jamessan/vim-gnupg.git')
 call dein#add('yuratomo/w3m.vim')
 call dein#add('toyamarinyon/vim-swift')
 call dein#add('tpope/vim-surround') " S'とかで囲める
+call dein#add('itchyny/vim-cursorword') " カーソルの下の変数に下線表示
 
 "NeoBundle 'vim-scripts/L9'
 "NeoBundle 'motemen/hatena-vim'
