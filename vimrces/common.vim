@@ -146,3 +146,28 @@ function! Alc_Setting()
 	vmap <Space>alc y :call VAlc()<CR>
 endfunction
 call Alc_Setting()
+
+"camel case <=> snake case
+function! SwapCase_Setting()
+	function! SnakeCamel()
+	  let reg = @"
+	  let @" = ':s/^\(.\)/\u\1/e'
+	  :execute @"
+	  let @" = ':s/_\(.\)/\u\1/ge'
+	  :execute @"
+	  let @" = reg
+	endfunction
+
+	function! CamelSnake()
+	  let reg = @"
+	  let @" = ':s/^\(.\)/\l\1/e'
+	  :execute @"
+	  let @" = ':s/\([A-Z]\)/_\l\1/ge'
+	  :execute @"
+	  let @" = reg
+	endfunction
+	"Swap Case to Camel case
+	nmap <Space>scc :call SnakeCamel()<CR>
+	nmap <Space>scs :call CamelSnake()<CR>
+endfunction
+call SwapCase_Setting()
