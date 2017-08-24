@@ -40,14 +40,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "space x 2で行選択
 nmap <Space><Space> V
 
-"escapeでime off linux
-if has('unix')
-	function! ImInActivate()
-		call system('fcitx-remote -c')
-	endfunction
-	inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
-endif
-
 "全角スペースのハイライト
 augroup highlightDoubleByteSpace
 	autocmd!
