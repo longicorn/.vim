@@ -1,0 +1,24 @@
+[submodule "pack/shapeshed/start/minibufexpl.vim"]
+	path = pack/shapeshed/start/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "pack/shapeshed/start/unite.vim"]
+	path = pack/shapeshed/start/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "pack/shapeshed/start/vim-gnupg"]
+	path = pack/shapeshed/start/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git
+[submodule "pack/shapeshed/start/vim-cursorword"]
+	path = pack/shapeshed/start/vim-cursorword
+	url = https://github.com/itchyny/vim-cursorword.git
+[submodule "pack/shapeshed/start/w3m.vim"]
+	path = pack/shapeshed/start/w3m.vim
+	url = https://github.com/yuratomo/w3m.vim.git
+[submodule "pack/shapeshed/start/Align"]
+	path = pack/shapeshed/start/Align
+	url = https://github.com/vim-scripts/Align.git
+[submodule "pack/shapeshed/start/DrawIt"]
+	path = pack/shapeshed/start/DrawIt
+	url = https://github.com/vim-scripts/DrawIt.git
+[submodule "pack/shapeshed/start/vim-surround"]
+	path = pack/shapeshed/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git

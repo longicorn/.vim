@@ -1,14 +1,10 @@
 個人用の~/.vimです。
 
-=初期設定
+# 初期設定
 ```
-$ git clone https://github.com/longicorn/.vim.git ~/.vim
-$ cp ~/.vim/.vimrc ~/
+$ cp .vimrc ~/
 ```
 
-https://github.com/Shougo/dein.vim をインストール
-
-vimを起動してpluginをインストール
-```
-:call dein#install()
-```
+# plugin
+vim8 packagesを利用
+git submoduleを利用しているので、適時updateすること
