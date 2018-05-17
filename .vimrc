@@ -1,4 +1,3 @@
-runtime! vimrces/manager.vim
 runtime! vimrces/common.vim
 runtime! vimrces/color.vim
 runtime! vimrces/lang.vim
