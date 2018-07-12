@@ -22,3 +22,6 @@
 [submodule "pack/shapeshed/start/vim-surround"]
 	path = pack/shapeshed/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/shapeshed/start/ale"]
+	path = pack/shapeshed/start/ale
+	url = https://github.com/w0rp/ale.git
