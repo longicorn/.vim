@@ -29,6 +29,11 @@ set diffopt=vertical
 let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "yasusi "
 
+"Spell Check
+set spell
+set spelllang=en,cjk
+set spellcapcheck=
+
 "
 " userの拡張設定
 "
