@@ -45,6 +45,25 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "space x 2で行選択
 nmap <Space><Space> V
 
+" ファイル
+" 使い方space + f + <コマンド>
+"ファイル一覧 は `space ff`
+function! Unite_Setting()
+	nnoremap [unite] <Nop>
+	nmap <Space>f [unite]
+	"ファイル一覧
+	nnoremap <silent> [unite]f :Unite file<CR>
+	"ファイル一覧
+	nnoremap <silent> [unite]c :UniteWithBufferDir -buffer-name=files file<CR>
+	"最近使ったファイルの一覧
+	noremap [unite]l :Unite file_mru<CR>
+	"ブックマーク一覧
+	nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
+	"ブックマークに追加
+	nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+endfunction
+call Unite_Setting()
+
 "全角スペースのハイライト
 augroup highlightDoubleByteSpace
 	autocmd!
