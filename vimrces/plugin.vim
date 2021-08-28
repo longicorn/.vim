@@ -44,9 +44,9 @@ function! Asyncomplete_Setting()
 	"非同期にコード補完
 	"let g:lsp_async_completion = 1
 	inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-	inoremap <expr> j pumvisible() ? "\<C-n>" : "\<Tab>"
+	inoremap <expr> j pumvisible() ? "\<C-n>" : "j"
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-	inoremap <expr> k pumvisible() ? "\<C-p>" : "\<S-Tab>"
+	inoremap <expr> k pumvisible() ? "\<C-p>" : "k"
 	inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 endfunction
 call Asyncomplete_Setting()
