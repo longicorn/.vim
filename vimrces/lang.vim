@@ -1,6 +1,8 @@
 "for language
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
 
+command Ctags execute '!ctags -R'
+
 function! Ruby_Setting()
 	"function! RubyMethodFold(line)
 	"	let line_is_method_or_end = synIDattr(synID(a:line,1,0), 'name') == 'rubyMethodBlock'
@@ -13,6 +15,8 @@ function! Ruby_Setting()
 	"set foldlevel=1
 	"set foldnestmax=2
 	"set ts=2 sw=2 foldexpr=RubyMethodFold(v:lnum)
+
+	command! Ctags execute '!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=node_modules . $(bundle list --paths) &'
 endfunction
 au FileType ruby call Ruby_Setting()
 nnoremap <C-]> g<C-]> 
