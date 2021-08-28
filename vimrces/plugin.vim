@@ -22,8 +22,8 @@ endfunction
 " LSP(Language Servers Protocol)
 " 使い方space + l + <コマンド>
 function! LSP_Setting()
-	let g:lsp_diagnostics_enabled = 1
-	setlocal omnifunc=lsp#complete
+	let g:lsp_diagnostics_enabled = 0
+	"setlocal omnifunc=lsp#complete
 	"setlocal signcolumn=yes
 	nnoremap [unite] <Nop>
 	nmap <Space>l [unite]
@@ -40,10 +40,13 @@ call LSP_Setting()
 " asyncomplete
 " 使い方 Ctrl+nで候補を出す
 function! Asyncomplete_Setting()
+	"let g:asyncomplete_auto_popup = 0
 	"非同期にコード補完
 	"let g:lsp_async_completion = 1
 	inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+	inoremap <expr> j pumvisible() ? "\<C-n>" : "\<Tab>"
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-	inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+	inoremap <expr> k pumvisible() ? "\<C-p>" : "\<S-Tab>"
+	inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 endfunction
 call Asyncomplete_Setting()
