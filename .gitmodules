@@ -34,3 +34,15 @@
 [submodule "pack/shapeshed/start/asyncomplete.vim"]
 	path = pack/shapeshed/start/asyncomplete.vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "pack/shapeshed/start/asyncomplete-lsp.vim"]
+	path = pack/shapeshed/start/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "pack/shapeshed/start/vim-lsp-icons"]
+	path = pack/shapeshed/start/vim-lsp-icons
+	url = https://github.com/mattn/vim-lsp-icons.git
+[submodule "pack/shapeshed/start/vim-vsnip"]
+	path = pack/shapeshed/start/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip.git
+[submodule "pack/shapeshed/start/vim-vsnip-integ"]
+	path = pack/shapeshed/start/vim-vsnip-integ
+	url = https://github.com/hrsh7th/vim-vsnip-integ.git

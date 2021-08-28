@@ -21,9 +21,10 @@ endfunction
 
 " LSP(Language Servers Protocol)
 " 使い方space + l + <コマンド>
-"ファイル一覧 は `space ff`
 function! LSP_Setting()
-	let g:lsp_diagnostics_enabled = 0
+	let g:lsp_diagnostics_enabled = 1
+	setlocal omnifunc=lsp#complete
+	"setlocal signcolumn=yes
 	nnoremap [unite] <Nop>
 	nmap <Space>l [unite]
 	nnoremap <silent> [unite]h :LspHover<CR>
@@ -31,6 +32,7 @@ function! LSP_Setting()
 	nnoremap <silent> [unite]dd :LspPeekDefinition<CR>
 	nnoremap <silent> [unite]td :LspTypeDefinition<CR>
 	nnoremap <silent> [unite]tdd :LspPeekTypeDefinition<CR>
+	nnoremap <silent> [unite]r :LspRename<CR>
 endfunction
 call LSP_Setting()
 
@@ -38,10 +40,10 @@ call LSP_Setting()
 " asyncomplete
 " 使い方 Ctrl+nで候補を出す
 function! Asyncomplete_Setting()
-	let g:lsp_async_completion = 1
+	"非同期にコード補完
+	"let g:lsp_async_completion = 1
 	inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 	inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 endfunction
 call Asyncomplete_Setting()
-

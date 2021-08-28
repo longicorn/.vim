@@ -34,6 +34,8 @@ set spell
 set spelllang=en,cjk
 set spellcapcheck=
 
+set complete=.,w,b,u,t,i
+
 "
 " userの拡張設定
 "

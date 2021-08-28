@@ -17,6 +17,7 @@ function! Ruby_Setting()
 	"set ts=2 sw=2 foldexpr=RubyMethodFold(v:lnum)
 
 	command! Ctags execute '!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=node_modules . $(bundle list --paths) &'
+	autocmd FileType ruby setlocal omnifunc=lsp#complete
 endfunction
 au FileType ruby call Ruby_Setting()
 nnoremap <C-]> g<C-]> 
