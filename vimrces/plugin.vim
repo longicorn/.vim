@@ -22,7 +22,7 @@ endfunction
 " LSP(Language Servers Protocol)
 " 使い方space + l + <コマンド>
 function! LSP_Setting()
-	let g:lsp_diagnostics_enabled = 0
+	let g:lsp_diagnostics_enabled = 1
 	"setlocal omnifunc=lsp#complete
 	"setlocal signcolumn=yes
 	nnoremap [unite] <Nop>

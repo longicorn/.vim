@@ -18,6 +18,12 @@ function! Ruby_Setting()
 
 	command! Ctags execute '!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=node_modules . $(bundle list --paths) &'
 	autocmd FileType ruby setlocal omnifunc=lsp#complete
+
+	let g:lsp_diagnostics_echo_cursor = 1
+	let g:lsp_diagnostics_echo_delay = 200
+	let g:lsp_diagnostics_virtual_text_enabled = 0
+	let g:lsp_diagnostics_signs_enabled = 1
+	let g:lsp_settings_filetype_ruby = ['solargraph', 'steep']
 endfunction
 au FileType ruby call Ruby_Setting()
 nnoremap <C-]> g<C-]> 
