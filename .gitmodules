@@ -46,3 +46,6 @@
 [submodule "pack/shapeshed/start/vim-vsnip-integ"]
 	path = pack/shapeshed/start/vim-vsnip-integ
 	url = https://github.com/hrsh7th/vim-vsnip-integ.git
+[submodule "pack/shapeshed/start/vim-ambiwidth"]
+	path = pack/shapeshed/start/vim-ambiwidth
+	url = https://github.com/rbtnn/vim-ambiwidth

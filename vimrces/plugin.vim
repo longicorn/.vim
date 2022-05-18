@@ -25,6 +25,8 @@ function! LSP_Setting()
 	let g:lsp_diagnostics_enabled = 1
 	"setlocal omnifunc=lsp#complete
 	"setlocal signcolumn=yes
+	"let g:lsp_log_file = ''
+	"let g:lsp_log_verbose = 1
 	nnoremap [unite] <Nop>
 	nmap <Space>l [unite]
 	nnoremap <silent> [unite]h :LspHover<CR>
@@ -48,3 +50,8 @@ function! Asyncomplete_Setting()
 	inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 endfunction
 call Asyncomplete_Setting()
+
+function! Ambiwidth_Setting()
+	set ambiwidth=single
+endfunction
+call Ambiwidth_Setting()
