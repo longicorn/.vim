@@ -49,3 +49,6 @@
 [submodule "pack/shapeshed/start/vim-ambiwidth"]
 	path = pack/shapeshed/start/vim-ambiwidth
 	url = https://github.com/rbtnn/vim-ambiwidth
+[submodule "pack/shapeshed/start/copilot.vim"]
+	path = pack/shapeshed/start/copilot.vim
+	url = https://github.com/github/copilot.vim
