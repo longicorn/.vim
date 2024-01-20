@@ -52,3 +52,6 @@
 [submodule "pack/shapeshed/start/copilot.vim"]
 	path = pack/shapeshed/start/copilot.vim
 	url = https://github.com/github/copilot.vim
+[submodule "pack/Exafunction/start/codeium.vim"]
+	path = pack/Exafunction/start/codeium.vim
+	url = https://github.com/Exafunction/codeium.vim
