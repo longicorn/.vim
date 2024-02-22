@@ -4,8 +4,7 @@
 "	let g:miniBufExplMapWindowNavArrows = 1
 "	let g:miniBufExplMapCTabSwitchBuffs = 1
 "endfunction
-"call MiniBufExpl_Setting()
-"let loaded_minibufexplorer=1 "無効
+"call MiniBufExpl_Setting() "let loaded_minibufexplorer=1 "無効
 
 " neocomplcache
 function! Neocomplcache_Setting()
@@ -27,6 +26,8 @@ function! LSP_Setting()
 	"setlocal signcolumn=yes
 	"let g:lsp_log_file = ''
 	"let g:lsp_log_verbose = 1
+	"使い方
+	"<space>lh : LspHover
 	nnoremap [unite] <Nop>
 	nmap <Space>l [unite]
 	nnoremap <silent> [unite]h :LspHover<CR>
@@ -55,3 +56,20 @@ function! Ambiwidth_Setting()
 	set ambiwidth=single
 endfunction
 call Ambiwidth_Setting()
+
+"let g:tabby_trigger_mode = 'manual'
+"function! Tabby_Setting()
+"	filetype plugin on
+"	let g:tabby_server_url = 'http://localhost:5000'
+"	"let g:tabby_filetype_to_languages = {
+"	"	\ "rb": "ruby",
+"	"\ }
+"endfunction
+"call Tabby_Setting()
+
+
+function! Copilot_Setting()
+	filetype plugin on
+	let g:copilot_proxy = 'http://localhost:5000'
+endfunction
+call Copilot_Setting()
