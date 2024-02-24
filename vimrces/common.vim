@@ -66,6 +66,16 @@ function! Unite_Setting()
 endfunction
 call Unite_Setting()
 
+function! Buffer_Setting()
+	nnoremap [unite] <Nop>
+	nmap <Space>b [unite]
+	nnoremap <silent> [unite]p :bprev<CR>
+	nnoremap <silent> [unite]n :bnext<CR>
+	nnoremap <silent> [unite]f :bfirst<CR>
+	nnoremap <silent> [unite]l :blast<CR>
+endfunction
+call Buffer_Setting()
+
 "全角スペースのハイライト
 augroup highlightDoubleByteSpace
 	autocmd!
