@@ -1,6 +1,3 @@
-[submodule "pack/shapeshed/start/minibufexpl.vim"]
-	path = pack/shapeshed/start/minibufexpl.vim
-	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "pack/shapeshed/start/unite.vim"]
 	path = pack/shapeshed/start/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
